@@ -115,23 +115,6 @@ header {
   max-width: 300px;
 }
 
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 3rem 5vw;
-  }
-  .hero-left h1 {
-    font-size: 1.8rem;
-  }
-  .hero-tagline {
-    font-size: 1rem;
-  }
-  .hero-image {
-    max-width: 220px;
-    margin-top: 1.5rem;
-  }
-}
 
 /* Buttons */
 .btn {
@@ -175,15 +158,7 @@ header {
   flex: 1;
 }
 
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-image img {
-    max-width: 250px;
-  }
-}
+
 
 .about-text h2 {
   color: var(--accent);
@@ -317,17 +292,7 @@ header {
   text-align: center;
 }
 
-@media (max-width: 600px) {
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.9rem;
-    padding: 0.7rem;
-  }
-  .btn {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
-  }
-}
+
 
 .contact-container h2 {
   color: var(--accent);
@@ -384,17 +349,7 @@ header {
   padding: 1.5rem 8vw;
   color: #ccc;
 }
-@media (max-width: 600px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-  .footer-nav {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-}
+
 
 .footer-container {
   display: flex;
@@ -432,32 +387,35 @@ header {
 }
 
 /* ====== Responsive ====== */
-@media (max-width: 992px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
+/* ====== Mobile adjustments ====== */
+@media (max-width: 768px) {
+  .hero-left h1 {
+    font-size: 1.8rem; /* slightly smaller */
   }
-  .about-container {
-    flex-direction: column;
-    text-align: center;
+  .hero-tagline {
+    font-size: 1rem; /* smaller tagline */
+  }
+  .hero-image {
+    max-width: 200px; /* mobile-friendly image */
+    margin-top: 1.5rem;
+  }
+  .about-image img {
+    max-width: 200px; /* mobile-friendly about image */
   }
 }
 
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-  h2 {
-    font-size: 1.5rem;
+  .project-image {
+    height: 130px; /* smaller project card images */
   }
   .btn {
-    padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
+    padding: 0.5rem 1rem; /* smaller buttons on mobile */
   }
-  .project-image {
-    height: 150px;
+  h1 {
+    font-size: 1.6rem; /* adjust hero H1 further for very small phones */
   }
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }}
+  h2 {
+    font-size: 1.3rem; /* adjust section titles */
+  }
+}
