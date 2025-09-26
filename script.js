@@ -199,7 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const lim = 2.5;
       const tx = Math.max(-lim, Math.min(lim, currX * strength));
       const ty = Math.max(-lim, Math.min(lim, currY * strength));
-      // Use translate property so we don't override existing rotate/scale animations
       el.style.translate = `${tx.toFixed(2)}vw ${ty.toFixed(2)}vh`;
     });
 
