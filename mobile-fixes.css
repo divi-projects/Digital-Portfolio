@@ -1,0 +1,58 @@
+/* Mobile stability overrides — keep this file after style.css */
+
+/* Hide custom cursor on touch devices */
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring { display: none !important; }
+}
+
+@media (max-width: 768px) {
+  /* Background clean-up to improve readability */
+  .bg-aurora { display: none !important; }
+  .hero-section::before { display: none !important; }
+
+  /* Gradient-text fallback for phones (always visible) */
+  .gradient-text {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    color: var(--accent) !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  }
+
+  /* Hero layout tighten + center */
+  .hero-section {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    padding-top: 4rem;
+  }
+  .hero-left {
+    margin-inline: auto;
+    padding-inline: 4vw;
+    position: relative;
+    z-index: 1; /* ensures text is above any backgrounds */
+  }
+  .hero-left h1 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+    line-height: 1.25;
+  }
+  .hero-tagline { font-size: 1rem; }
+  .hero-cta { justify-content: center; }
+
+  .avatar {
+    width: 200px !important;
+    margin-inline: auto;
+  }
+
+  /* Section spacing tighter on phones */
+  .section { padding: 3.2rem 6vw; }
+
+  /* Make main containers snug (avoid horizontal scroll) */
+  html, body { overflow-x: hidden; }
+}
+
+/* Slight tightening for very small phones */
+@media (max-width: 360px) {
+  .site-header, .section, .hero-section { padding-inline: 5vw; }
+  .btn { padding: 0.7rem 1rem; font-size: 0.9rem; }
+}
