@@ -172,11 +172,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Parallax blobs
+// Parallax blobs (desktop only / no coarse pointers)
 document.addEventListener('DOMContentLoaded', () => {
   const blobs = document.querySelectorAll('.bg-aurora span');
   if (!blobs.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  // Skip parallax on touch/coarse pointers
   if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
 
   let targetX = 0, targetY = 0;
@@ -275,10 +274,9 @@ document.addEventListener('DOMContentLoaded', () => {
   bars.forEach(b => obs.observe(b));
 });
 
-// Tilt effects
+// Tilt effects (desktop only)
 document.addEventListener('DOMContentLoaded', () => {
   if (!window.VanillaTilt) return;
-  // Skip tilt on touch/coarse pointers
   if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
 
   const cards = document.querySelectorAll('.project-card, .timeline-card');
