@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Divyansh Gupta Portfolio</title>
+  <meta name="description" content="Portfolio of Divyansh Gupta — AI Engineer aspirant, Web Developer, Python enthusiast. Projects, skills, and contact." />
+  <meta name="theme-color" content="#0a192f" />
+
+  <script>document.documentElement.classList.add('js-ready');</script>
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        var mode = (saved === 'light' || saved === 'dark') ? saved : (prefersLight ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', mode);
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', mode === 'light' ? '#f7fafc' : '#0a192f');
+      } catch(e) {}
+    })();
+  </script>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+  <link rel="preload" as="image" href="my.jpg" imagesizes="(max-width: 600px) 200px, (max-width: 1100px) 260px, 300px">
+
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-aurora" aria-hidden="true">
+    <span class="a1"></span><span class="a2"></span><span class="a3"></span>
+  </div>
+
+  <a class="skip-link" href="#hero">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="logo" aria-label="Site logo">My Digital Portfolio</div>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-controls">
+      <button class="hamburger" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false"></button>
+      <button class="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <section id="hero" class="hero-section" aria-labelledby="intro-heading">
+    <div class="hero-left">
+      <h1 id="intro-heading">
+        Hi! I’m Divyansh 👋
+      </h1>
+      <p class="hero-tagline">Aspiring <span id="typed" aria-live="polite" role="text"></span></p>
+      <p class="hero-tagline">Turning ideas into code. Building smart projects and exploring AI & emerging technologies.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="resume.pdf" class="btn btn-outline" download>Download Resume</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="avatar" aria-hidden="true">
+        <span class="orbit orbit-1"></span>
+        <span class="orbit orbit-2"></span>
+        <span class="orbit orbit-3"></span>
+        <img src="my.jpg" alt="Portrait of Divyansh Gupta" class="hero-image" width="600" height="600" loading="eager" fetchpriority="high" />
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">About Me</h2>
+
+      <div class="about-container">
+        <div class="about-text">
+          <p>Hi, I’m <strong>Divyansh Gupta</strong> — a curious learner and aspiring <strong>AI Engineer</strong>.
+          I’m currently pursuing my <em>Diploma in Computer Engineering (3rd Semester)</em> at Guru Nanak Dev Rohini Campus.</p>
+
+          <p>I’m passionate about <strong>coding, web development, and artificial intelligence</strong>.
+          I have strong skills in multiple programming languages and hands-on project experience. I constantly work on building real-world projects to enhance my problem-solving and development abilities.
+          I enjoy exploring new technologies, contributing to open-source projects, and participating in online coding challenges to sharpen my skills.</p>
+
+          <ul class="about-highlights">
+            <li>💻 Skilled in Web Development (HTML, CSS, JavaScript)</li>
+            <li>🐍 <strong>Advanced in Python</strong> (beginner to advanced level covered)</li>
+            <li>🔧 Proficient in C Programming</li>
+            <li>🎯 Focused on becoming an AI Engineer</li>
+            <li>🚀 Actively <strong>looking for internships</strong> to gain real-world experience</li>
+            <li>🌐 Keen on exploring Cloud Computing, AI, and emerging technologies</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="Me.jpg" alt="About Divyansh" width="600" height="400" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section" aria-labelledby="skills-title" data-divider="true">
+      <h2 id="skills-title" class="section-title">My Skills</h2>
+      <p class="section-subtitle">A journey of learning — visualized as a timeline</p>
+
+      <div class="skills-timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <article class="timeline-item left">
+          <div class="timeline-dot" aria-hidden="true"><i class="fab fa-python"></i></div>
+          <div class="timeline-card">
+            <header class="timeline-header">
+              <h3>Python</h3><span class="level">Advanced</span>
+            </header>
+            <div class="progress" role="progressbar" aria-label="Python proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92">
+              <span class="bar" data-perc="92"></span>
+            </div>
+            <p class="timeline-desc">Strong in core concepts, OOP, file handling; building scripts and small tools.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item right">
+          <div class="timeline-dot" aria-hidden="true"><i class="fab fa-html5"></i></div>
+          <div class="timeline-card">
+            <header class="timeline-header">
+              <h3>HTML</h3><span class="level">Advanced</span>
+            </header>
+            <div class="progress" role="progressbar" aria-label="HTML proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
+              <span class="bar" data-perc="90"></span>
+            </div>
+            <p class="timeline-desc">Semantic, accessible structure with SEO-friendly markup.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item left">
+          <div class="timeline-dot" aria-hidden="true"><i class="fab fa-css3-alt"></i></div>
+          <div class="timeline-card">
+            <header class="timeline-header">
+              <h3>CSS</h3><span class="level">Advanced</span>
+            </header>
+            <div class="progress" role="progressbar" aria-label="CSS proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="86">
+              <span class="bar" data-perc="86"></span>
+            </div>
+            <p class="timeline-desc">Responsive layouts, animations, and modern UI techniques.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item right">
+          <div class="timeline-dot" aria-hidden="true"><i class="fab fa-js"></i></div>
+          <div class="timeline-card">
+            <header class="timeline-header">
+              <h3>JavaScript</h3><span class="level">Intermediate</span>
+            </header>
+            <div class="progress" role="progressbar" aria-label="JavaScript proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="72">
+              <span class="bar" data-perc="72"></span>
+            </div>
+            <p class="timeline-desc">DOM scripting, basic APIs, and UI interactions.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item left">
+          <div class="timeline-dot" aria-hidden="true"><i class="fas fa-code"></i></div>
+          <div class="timeline-card">
+            <header class="timeline-header">
+              <h3>C</h3><span class="level">Intermediate</span>
+            </header>
+            <div class="progress" role="progressbar" aria-label="C proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
+              <span class="bar" data-perc="70"></span>
+            </div>
+            <p class="timeline-desc">Foundational programming and problem-solving.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item right">
+          <div class="timeline-dot" aria-hidden="true"><i class="fab fa-github"></i></div>
+          <div class="timeline-card">
+            <header class="timeline-header">
+              <h3>GitHub</h3><span class="level">Intermediate</span>
+            </header>
+            <div class="progress" role="progressbar" aria-label="GitHub proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75">
+              <span class="bar" data-perc="75"></span>
+            </div>
+            <p class="timeline-desc">Repos, branches, PRs, and project organization.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects-section" aria-labelledby="projects-title" data-divider="true">
+      <h2 id="projects-title" class="section-title">My Projects</h2>
+      <p class="section-subtitle">Projects That Define My Journey</p>
+
+      <div class="projects-grid">
+        <article class="project-card" aria-labelledby="proj1-title">
+          <div class="project-media">
+            <img src="DP.png" alt="Portfolio Website preview" class="project-image" width="960" height="540" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3 id="proj1-title">Portfolio Website</h3>
+            <p>A responsive personal portfolio website built using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+            <div class="project-tags">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://divi-projects.github.io/Digital-Portfolio/" class="btn" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/divi-projects/Digital-Portfolio" target="_blank" class="btn btn-outline" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="proj2-title">
+          <div class="project-media">
+            <img src="p2.png" alt="Python CSV File Handling Project preview" class="project-image" width="960" height="540" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3 id="proj2-title">Python CSV File Handling</h3>
+            <p>A Python project demonstrating file handling with CSV files. It includes reading, writing, and updating data efficiently using the <code>csv</code> module.</p>
+            <div class="project-tags">
+              <span class="chip">Python</span>
+              <span class="chip">CSV</span>
+              <span class="chip">CLI</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/divi-projects/my-python-programs" target="_blank" class="btn btn-outline" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title" data-divider="true">
+      <h2 id="contact-title" class="section-title">Contact Me</h2>
+      <p class="section-subtitle">Let’s connect and collaborate!</p>
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Your Name</label>
+          <input id="name" type="text" name="name" placeholder="Your Name" required aria-label="Your Name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Your Email</label>
+          <input id="email" type="email" name="email" placeholder="Your Email" required aria-label="Your Email" autocomplete="email">
+        </div>
+        <div class="field field-textarea">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <div class="contact-links" aria-label="Social links">
+        <a href="mailto:divyanshgupta103@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a>
+        <a href="https://www.linkedin.com/in/divyansh-gupta-352614370/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        <a href="https://github.com/divi-projects" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-left"><p>© 2025 Divyansh Gupta. All rights reserved.</p></div>
+      <div class="footer-center">
+        <ul class="footer-nav">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/divi-projects" target="_blank" aria-label="GitHub" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/divyansh-gupta-352614370/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/divyansh__1_/" target="_blank" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js" defer></script>
+
+  
+  <script src="script.js" defer></script>
+</body>
+</html>
